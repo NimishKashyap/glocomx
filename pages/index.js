@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import Section1 from "../components/Homepage/Section1";
+import Section2 from "../components/Homepage/Section2";
 import Navbar from "../components/Navbar/Navbar";
 import styles from "../styles/Home.module.css";
 
@@ -15,6 +16,7 @@ export default function Home({result}) {
       <main className="font-poppins text-lg font-base h-screen bg-cover bg-earth bg-no-repeat">
         <Navbar />
         <Section1 data={result} />
+        <Section2 data={result.section2}/>
       </main>
     </>
   );
