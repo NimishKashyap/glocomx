@@ -13,7 +13,7 @@ export default function Home({result}) {
         <title>Glocomx</title>
       </Head>
 
-      <main className="font-poppins text-lg font-base h-screen bg-cover bg-earth bg-no-repeat">
+      <main className="font-poppins text-lg font-base h-[101vh] bg-cover bg-earth bg-no-repeat">
         <Navbar />
         <Section1 data={result} />
         <Section2 data={result.section2}/>

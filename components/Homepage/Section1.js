@@ -10,7 +10,27 @@ function Section1({ data }) {
 
   return (
     <section className="text-white pt-28 w-full h-full grid grid-cols-2 px-36 items-center">
-      <div className="flex flex-col pb-[10rem]">
+      <motion.div
+        variants={{
+          hidden: {
+            opacity: 0,
+            x: "-5rem",
+          },
+          visible: {
+            opacity: 1,
+            x: 0,
+            transition: {
+              type: "tween",
+              delayChildren: 0.1,
+              staggerChildren: 0.1,
+              duration: 1,
+            },
+          },
+        }}
+        initial="hidden"
+        animate="visible"
+        className="flex flex-col pb-[10rem]"
+      >
         <h1 className="text-6xl font-medium text-primary">{heroHeading}</h1>
         <h3 className="text-4xl font-medium w-2/3 mt-10 mb-10">{subHeading}</h3>
         <p className="font-light">{heroDescription}</p>
@@ -26,7 +46,7 @@ function Section1({ data }) {
         >
           Buy Now
         </motion.button>
-      </div>
+      </motion.div>
       <div className="flex flex-col justify-center items-center mb-[17rem] pl-24 h-full">
         <p className="text-center text-2xl mb-10">
           Public Sale, Price: ${price}
