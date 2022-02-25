@@ -13,8 +13,8 @@ function Section2Items({ details, index }) {
           opacity: 1,
           x: 0,
           transition: {
-            duration: 1,
-            delay: index * 0.5,
+            duration: 0.5,
+            delay: index * 0.05,
           },
         },
       }}

@@ -39,7 +39,7 @@ function SmallNavbar() {
 function BigNavbar() {
   const [selected, setSelected] = useState(0);
   return (
-    <nav className="px-36 flex justify-between fixed w-full">
+    <nav className="px-36 flex justify-between absolute w-full">
       <img className="h-28 py-5" src="/assets/images/navbar_logo.png" />
       <AnimateSharedLayout transition={{ duration: 0.2 }}>
         <ul className="text-white flex w-3/5 justify-between items-center">
