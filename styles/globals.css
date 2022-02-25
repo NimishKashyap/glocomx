@@ -6,9 +6,18 @@
 * {
   font-family: "Poppins", sans-serif;
 }
-
+body {
+  background-color: #010024;
+}
 @layer base {
   .hover-state {
     @apply cursor-pointer text-primary;
   }
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
