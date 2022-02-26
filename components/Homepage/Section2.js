@@ -20,7 +20,7 @@ function Section2Items({ details, index }) {
       }}
       initial="hidden"
       whileInView={"visible"}
-      viewport
+      viewport={{ once: true }}
       className="flex flex-col items-center justify-center"
     >
       <img className="h-20 object-contain" src={details.image.url} />
