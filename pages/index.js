@@ -30,7 +30,7 @@ export default function Home({ result }) {
         <title>Glocomx</title>
       </Head>
 
-      <main className="font-poppins text-lg font-base h-[101vh] bg-cover bg-earth bg-no-repeat no-scrollbar">
+      <main className="font-poppins text-lg font-base h-[101vh]  no-scrollbar">
         <Navbar />
         <Section1 data={result} />
         <Section2 data={result.section2} />
@@ -50,7 +50,7 @@ export default function Home({ result }) {
         <Contact data={result} />
         <Testimonial data={result} />
         <Partners data={result} />
-        <Footer />
+        <Footer data={result}/>
       </main>
     </>
   );

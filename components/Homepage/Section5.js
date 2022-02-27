@@ -4,7 +4,7 @@ function BenefitCard({ item, index }) {
   return (
     <motion.div
       whileHover={{ scale: 1.01, backgroundColor: "#23293B" }}
-      className="flex flex-col text-center w-[350px] bg-blue-400 bg-opacity-50 py-16 px-5 text-white rounded-xl"
+      className="flex flex-col text-center w-auto lg:w-[350px] bg-blue-400 bg-opacity-50 py-16 px-5 text-white rounded-xl"
     >
       <motion.img
         whileHover={{
@@ -27,11 +27,11 @@ function BenefitCard({ item, index }) {
 
 function Section5({ data }) {
   return (
-    <section className="bg-blue-700 px-16 text-white">
-      <h1 className="text-white font-medium pt-[5rem] text-4xl pl-[6rem]">
+    <section className="bg-blue-700 lg:px-16 text-white">
+      <h1 className="text-white font-medium lg:pt-[5rem] text-xl lg:text-3xl pl-10 lg:pl-[6rem]">
         {data.section5_heading}
       </h1>
-      <div className="grid grid-cols-4 px-[5.1rem] my-16">
+      <div className="grid lg:grid-cols-4 px-10 lg:px-[5.1rem] my-16 gap-y-10">
         {data.section5_content.map((item, index) => (
           <BenefitCard item={item} index={index} key={index} />
         ))}

@@ -83,13 +83,13 @@ function RoadmapItems({ item, index }) {
 }
 function Section12({ data }) {
   return (
-    <section className="text-white px-[9rem]">
+    <section className="text-white lg:px-[9rem] px-10">
       <h1 className="font-medium text-3xl">Roadmap</h1>
-      <div className="grid grid-cols-2 gap-y-14 items-center gap-x-[5rem] py-[3rem] relative">
+      <div className="grid lg:grid-cols-2 gap-y-14 items-center gap-x-[5rem] py-[3rem] relative">
         {items.map((item, index) => (
           <RoadmapItems item={item} index={index} key={index} />
         ))}
-        <div className="h-full absolute w-3 bg-white mx-auto top-0 right-0 left-0 bottom-0 rounded-lg"/>
+        <div className="h-full hidden lg:block absolute w-3 bg-white mx-auto top-0 right-0 left-0 bottom-0 rounded-lg"/>
       </div>
     </section>
   );

@@ -12,9 +12,9 @@ function PartnersItems({ item, index }) {
 }
 function Partners({ data }) {
   return (
-    <section className="text-white px-[9rem] py-16 bg-blue-500 my-16">
+    <section className="text-white px-10 lg:px-[9rem] py-16 bg-blue-500 my-16">
       <h1 className="text-3xl font-medium">{data.partners_heading}</h1>
-      <div className="grid grid-cols-3 justify-items-center">
+      <div className="grid lg:grid-cols-3 justify-items-center">
         {data.partners.map((item, index) => (
           <PartnersItems key={index} item={item} index={index} />
         ))}

@@ -27,7 +27,7 @@ function Section2Items({ details, index }) {
       <h1 className="text-white mt-5">{details.heading}</h1>
       <p className="text-primary">{details.sub_heading}</p>
 
-      <Button className="w-full bg-primary text-white px-6 py-2 mt-5">
+      <Button className="lg:w-full bg-primary text-white px-6 py-2 mt-5">
         <a about="_blank" href={details.button_link}>
           {details.button_text}
         </a>
@@ -38,7 +38,7 @@ function Section2Items({ details, index }) {
 
 function Section2({ data }) {
   return (
-    <section className="h-[40vh] bg-blue-500 flex justify-evenly">
+    <section className="lg:h-[40vh] bg-blue-500 flex flex-col lg:flex-row justify-evenly py-5 gap-y-10">
       {data.map((item, index) => (
         <Section2Items key={index} details={item} index={index} />
       ))}

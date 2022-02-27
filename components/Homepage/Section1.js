@@ -9,7 +9,7 @@ function Section1({ data }) {
   let difference = Date.now() - Date(launchDate);
 
   return (
-    <section className="text-white pt-28 w-full h-full grid grid-cols-2 px-36 items-center">
+    <section className="text-white pt-28 w-full h-auto lg:h-full grid grid-cols-1 lg:grid-cols-2 px-10 lg:px-36 items-center bg-cover bg-earth bg-no-repeat">
       <motion.div
         variants={{
           hidden: {
@@ -29,11 +29,11 @@ function Section1({ data }) {
         }}
         initial="hidden"
         animate="visible"
-        className="flex flex-col pb-[10rem]"
+        className="flex flex-col pb-10 lg:pb-[10rem]"
       >
-        <h1 className="text-6xl font-medium text-primary">{heroHeading}</h1>
-        <h3 className="text-4xl font-medium w-2/3 mt-10 mb-10">{subHeading}</h3>
-        <p className="font-light">{heroDescription}</p>
+        <h1 className="text-3xl lg:text-6xl font-medium text-primary">{heroHeading}</h1>
+        <h3 className="text-2xl lg:text-4xl font-medium w-2/3 mt-10 mb-10">{subHeading}</h3>
+        <p className="font-light text-sm lg:text-base">{heroDescription}</p>
         <motion.button
           animate={{ borderRadius: "3rem" }}
           whileHover={{
@@ -42,30 +42,30 @@ function Section1({ data }) {
             borderRadius: "1rem",
           }}
           transition={{ duration: 0.3 }}
-          className="self-start mt-10 bg-primary w-2/5 py-5 text-2xl font-medium"
+          className="self-start mt-10 bg-primary w-3/5 lg:w-2/5 py-5 lg:text-2xl font-medium"
         >
           Buy Now
         </motion.button>
       </motion.div>
-      <div className="flex flex-col justify-center items-center mb-[17rem] pl-24 h-full">
+      <div className="flex flex-col justify-center items-center mb-10 lg:mb-[17rem] lg:pl-24 h-full">
         <p className="text-center text-2xl mb-10">
           Public Sale, Price: ${price}
         </p>
-        <div className="grid grid-cols-4 gap-10">
-          <div className="flex flex-col bg-black items-center px-10 py-6 rounded-xl">
-            <h1 className="text-2xl font-semibold">15</h1>
+        <div className="grid grid-cols-4 justify-items-center gap-x-10 lg:gap-10 text-sm">
+          <div className="flex w-[75px] flex-col bg-black items-center lg:px-10 py-6 rounded-xl">
+            <h1 className="lg:text-2xl font-semibold">15</h1>
             <p>Days</p>
           </div>
-          <div className="flex flex-col bg-black items-center px-10 py-6 rounded-xl">
-            <h1 className="text-2xl font-semibold">45</h1>
+          <div className="flex w-[75px] flex-col bg-black items-center lg:px-10 py-6 rounded-xl">
+            <h1 className="lg:text-2xl font-semibold">45</h1>
             <p>Hours</p>
           </div>
-          <div className="flex flex-col bg-black items-center px-10 py-6 rounded-xl">
-            <h1 className="text-2xl font-semibold">23</h1>
+          <div className="flex w-[75px] flex-col bg-black items-center lg:px-10 py-6 rounded-xl">
+            <h1 className="g:text-2xl font-semibold">23</h1>
             <p>Mins</p>
           </div>
-          <div className="flex flex-col bg-black items-center px-10 py-6 rounded-xl">
-            <h1 className="text-2xl font-semibold">11</h1>
+          <div className="flex w-[75px] flex-col bg-black items-center lg:px-10 py-6 rounded-xl">
+            <h1 className="lg:text-2xl font-semibold">11</h1>
             <p>Sec</p>
           </div>
         </div>

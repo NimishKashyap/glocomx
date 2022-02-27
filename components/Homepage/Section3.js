@@ -4,7 +4,7 @@ function NewsItems({ item, index }) {
   return (
     <motion.div
       whileHover={{ scale: 1.01 }}
-      className="bg-white flex flex-col items-center rounded-2xl w-[90%]"
+      className="bg-white flex flex-col items-center rounded-2xl mt-5 lg:mt-0 lg:w-[90%]"
     >
       <img
         className="w-full object-contain"
@@ -20,12 +20,12 @@ function NewsItems({ item, index }) {
 }
 function Section3({ data }) {
   return (
-    <section className="bg-blue-700 px-16">
+    <section className="bg-blue-700 px-10">
       {" "}
-      <h1 className="text-white font-medium pt-16 text-4xl pl-[6rem]">
+      <h1 className="text-white font-medium lg:pt-16 text-xl mt-5 lg:text-4xl lg:pl-[6rem]">
         {data.section3_heading}
       </h1>{" "}
-      <div className="grid grid-cols-3 w-full py-10 gap-x-5 px-24">
+      <div className="grid justify-items-center lg:grid-cols-3 w-full py-10 lg:gap-x-5 lg:px-24">
         {data.newsandupdates.map((item, index) => (
           <NewsItems key={index} item={item} index={index + 1} />
         ))}

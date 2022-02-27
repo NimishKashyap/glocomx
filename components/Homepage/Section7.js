@@ -1,9 +1,9 @@
 function Section7({ data }) {
   return (
-    <section className="text-white grid grid-cols-2 px-[10rem] py-16">
+    <section className="text-white grid lg:grid-cols-2 px-10 lg:px-[10rem] py-16">
       <div>
-        <h1 className="font-medium text-4xl">{data.section7_heading}</h1>
-        <p className="mt-12 text-xl font-light">{data.section7_desc1}</p>
+        <h1 className="font-medium text-xl mb-5 lg:text-4xl">{data.section7_heading}</h1>
+        <p className="mb-12 lg:text-xl font-light text-sm">{data.section7_desc1}</p>
       </div>
       <div className="justify-self-end">
         <img src="/assets/images/section7.png" alt="Section 6 Image" />
