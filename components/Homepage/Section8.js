@@ -8,7 +8,7 @@ function Section8({ data }) {
       </h1>
       {data.section8_content.map((item, index) => (
         <>
-          <h1 className="text-white mt-14 mb-10 font-medium">{item.heading}</h1>
+          <h1 key={index} className="text-white mt-14 mb-10 font-medium">{item.heading}</h1>
           <ProgressBar
             key={index}
             percentage={`${item.growth_rate}%`}

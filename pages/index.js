@@ -3,6 +3,7 @@ import Image from "next/image";
 import Advisors from "../components/Advisors";
 import Contact from "../components/Contact";
 import FAQ from "../components/FAQ";
+import Footer from "../components/Footer";
 import Section1 from "../components/Homepage/Section1";
 import Section10 from "../components/Homepage/Section10";
 import Section11 from "../components/Homepage/Section11";
@@ -16,7 +17,9 @@ import Section7 from "../components/Homepage/Section7";
 import Section8 from "../components/Homepage/Section8";
 import Section9 from "../components/Homepage/Section9";
 import Navbar from "../components/Navbar/Navbar";
+import Partners from "../components/Partners";
 import Team from "../components/Team";
+import Testimonial from "../components/Testimonial";
 import styles from "../styles/Home.module.css";
 
 export default function Home({ result }) {
@@ -45,6 +48,9 @@ export default function Home({ result }) {
         <Team data={result} />
         <Advisors data={result} />
         <Contact data={result} />
+        <Testimonial data={result} />
+        <Partners data={result} />
+        <Footer />
       </main>
     </>
   );
