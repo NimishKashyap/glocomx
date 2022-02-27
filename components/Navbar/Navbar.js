@@ -39,7 +39,7 @@ function SmallNavbar(props) {
 
 function BigNavbar() {
   const [selected, setSelected] = useState(0);
-  const [open, isOpen] = useState(true);
+  const [open, isOpen] = useState(false);
   return (
     <nav className="px-10 lg:px-36 flex justify-between absolute w-full items-center">
       <img className="h-28 py-5" src="/assets/images/navbar_logo.png" />
