@@ -79,6 +79,7 @@ function BigNavbar() {
             <motion.ul className="flex flex-col justify-center items-center h-full gap-y-10 font-medium text-white z-10">
               {listItems.map((item, i) => (
                 <motion.li
+                key={i}
                   className="cursor-pointer"
                   onClick={() => isOpen(false)}
                 >
