@@ -1,3 +1,5 @@
+import React from "react";
+
 function Section9({ data }) {
   return (
     <section id="portfolio" className="grid lg:grid-cols-2 px-5 lg:px-[9rem] py-10 lg:pt-20 bg-blue-500">
@@ -7,7 +9,7 @@ function Section9({ data }) {
       </div>
       <div className="flex flex-col text-white my-10 lg:my-0 lg:px-10 gap-y-10">
         {data.section9_content.map((item, index) => (
-          <>
+          <React.Fragment key={index}>
             <div className="flex items-center">
               <img className="mr-10" src={item.img.url} alt="company image" />
               <div>
@@ -15,7 +17,7 @@ function Section9({ data }) {
                 <p className="font-light text-sm lg:text-base">{item.description}</p>
               </div>
             </div>
-          </>
+          </React.Fragment>
         ))}
       </div>
     </section>

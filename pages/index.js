@@ -50,17 +50,18 @@ export default function Home({ result }) {
         <Contact data={result} />
         <Testimonial data={result} />
         <Partners data={result} />
-        <Footer data={result}/>
+        <Footer data={result} />
       </main>
     </>
   );
 }
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   const data = await fetch("https://glocomx-backend.herokuapp.com/home-page");
 
   const result = await data.json();
   return {
     props: { result },
+    revalidate: 1,
   };
 };
