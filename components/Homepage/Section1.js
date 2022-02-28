@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 function Section1({ data }) {
   const heroHeading = data.hero_heading;
@@ -6,7 +7,27 @@ function Section1({ data }) {
   const heroDescription = data.hero_description;
   const price = data.price;
   const launchDate = data.launchdate;
-  let difference = Date.now() - Date(launchDate);
+  const [days, setDays] = useState("");
+  const [hours, setHours] = useState("");
+  const [minutes, setMinutes] = useState("");
+  const [seconds, setSeconds] = useState("");
+
+  useEffect(() => {
+    setInterval(() => {
+      let difference = new Date(launchDate) - new Date();
+      let days = Math.floor(difference / (1000 * 60 * 60 * 24));
+      let hours = Math.floor(
+        (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      var minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((difference % (1000 * 60)) / 1000);
+      console.log(days, hours, minutes, seconds);
+      setDays(days);
+      setHours(hours);
+      setMinutes(minutes);
+      setSeconds(seconds);
+    }, 1000);
+  }, []);
 
   return (
     <section className="text-white pt-28 w-full h-auto lg:h-full grid grid-cols-1 lg:grid-cols-2 px-10 lg:px-36 items-center bg-cover bg-earth bg-no-repeat">
@@ -31,8 +52,12 @@ function Section1({ data }) {
         animate="visible"
         className="flex flex-col pb-10 lg:pb-[10rem]"
       >
-        <h1 className="text-3xl lg:text-6xl font-medium text-primary">{heroHeading}</h1>
-        <h3 className="text-2xl lg:text-4xl font-medium w-2/3 mt-10 mb-10">{subHeading}</h3>
+        <h1 className="text-3xl lg:text-6xl font-medium text-primary">
+          {heroHeading}
+        </h1>
+        <h3 className="text-2xl lg:text-4xl font-medium w-2/3 mt-10 mb-10">
+          {subHeading}
+        </h3>
         <p className="font-light text-sm lg:text-base">{heroDescription}</p>
         <motion.button
           animate={{ borderRadius: "3rem" }}
@@ -53,19 +78,19 @@ function Section1({ data }) {
         </p>
         <div className="grid grid-cols-4 justify-items-center gap-x-10 lg:gap-10 text-sm">
           <div className="flex w-[75px] flex-col bg-black items-center lg:px-10 py-6 rounded-xl">
-            <h1 className="lg:text-2xl font-semibold">15</h1>
+            <h1 className="lg:text-2xl font-semibold">{days}</h1>
             <p>Days</p>
           </div>
           <div className="flex w-[75px] flex-col bg-black items-center lg:px-10 py-6 rounded-xl">
-            <h1 className="lg:text-2xl font-semibold">45</h1>
+            <h1 className="lg:text-2xl font-semibold">{hours}</h1>
             <p>Hours</p>
           </div>
           <div className="flex w-[75px] flex-col bg-black items-center lg:px-10 py-6 rounded-xl">
-            <h1 className="g:text-2xl font-semibold">23</h1>
+            <h1 className="g:text-2xl font-semibold">{minutes}</h1>
             <p>Mins</p>
           </div>
           <div className="flex w-[75px] flex-col bg-black items-center lg:px-10 py-6 rounded-xl">
-            <h1 className="lg:text-2xl font-semibold">11</h1>
+            <h1 className="lg:text-2xl font-semibold">{seconds}</h1>
             <p>Sec</p>
           </div>
         </div>
