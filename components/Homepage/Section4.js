@@ -17,7 +17,7 @@ function Contents({ item }) {
 
 function Section4({ data }) {
   return (
-    <section className="bg-blue-700 text-white px-10 lg:px-40 py-24 relative">
+    <section id="howitworks" className="bg-blue-700 text-white px-10 lg:px-40 py-24 relative">
       <h1 className="text-xl lg:text-4xl font-medium mb-10">{data.section4_heading}</h1>
       <div className="lg:hidden w-[120px] mx-auto">
         <motion.img whileHover={{y:-10}} src="/assets/images/coin.png" alt="Coin image" />

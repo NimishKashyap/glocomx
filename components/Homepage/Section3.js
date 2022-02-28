@@ -20,7 +20,7 @@ function NewsItems({ item, index }) {
 }
 function Section3({ data }) {
   return (
-    <section className="bg-blue-700 px-10">
+    <section id="news" className="bg-blue-700 px-10">
       {" "}
       <h1 className="text-white font-medium lg:pt-16 text-xl mt-5 lg:text-4xl lg:pl-[6rem]">
         {data.section3_heading}

@@ -1,6 +1,6 @@
 function Section7({ data }) {
   return (
-    <section className="text-white grid lg:grid-cols-2 px-10 lg:px-[10rem] py-16">
+    <section id="token" className="text-white grid lg:grid-cols-2 px-10 lg:px-[10rem] py-16">
       <div>
         <h1 className="font-medium text-xl mb-5 lg:text-4xl">{data.section7_heading}</h1>
         <p className="mb-12 lg:text-xl font-light text-sm">{data.section7_desc1}</p>

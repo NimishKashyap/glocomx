@@ -38,7 +38,7 @@ function Section2Items({ details, index }) {
 
 function Section2({ data }) {
   return (
-    <section className="lg:h-[40vh] bg-blue-500 flex flex-col lg:flex-row justify-evenly py-5 gap-y-10">
+    <section id="shop" className="lg:h-[40vh] bg-blue-500 flex flex-col lg:flex-row justify-evenly py-5 gap-y-10">
       {data.map((item, index) => (
         <Section2Items key={index} details={item} index={index} />
       ))}

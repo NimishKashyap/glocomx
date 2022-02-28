@@ -98,7 +98,7 @@ function SmallRoadMapItems({ item, index }) {
 }
 function Section12({ data }) {
   return (
-    <section className="text-white lg:px-[9rem] px-10">
+    <section id="roadmap" className="text-white lg:px-[9rem] px-10">
       <h1 className="font-medium text-3xl">{data.section12_heading}</h1>
       <div className="hidden lg:grid lg:grid-cols-2 gap-y-14 items-center gap-x-[5rem] py-[3rem] relative">
         {data.roadmap.map((item, index) => (

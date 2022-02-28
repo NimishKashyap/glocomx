@@ -1,6 +1,6 @@
 function Section9({ data }) {
   return (
-    <section className="grid lg:grid-cols-2 px-5 lg:px-[9rem] py-10 lg:pt-20 bg-blue-500">
+    <section id="portfolio" className="grid lg:grid-cols-2 px-5 lg:px-[9rem] py-10 lg:pt-20 bg-blue-500">
       <div className="text-white">
         <h1 className="font-medium text-xl lg:text-3xl">{data.section9_heading}</h1>
         <p className="mt-10 text-sm">{data.section9_desc}</p>

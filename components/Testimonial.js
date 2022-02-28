@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react";
-import Slider from "react-slick";
 
 function TestimonialItems({ item, index }) {
   return (
@@ -50,8 +48,8 @@ function Testimonial({ data }) {
   //   }, 2000);
   // }, []);
   return (
-    <section className="text-white text-3xl px-10">
-      <h1 className="lg:mx-[9rem]">{data.testimonials_heading}</h1>
+    <section id="testimonial" className="text-white text-3xl px-10">
+      <h1 className="lg:mx-[9rem] mb-5">{data.testimonials_heading}</h1>
       <div className="hidden lg:grid lg:grid-cols-3 text-white justify-items-center lg:mx-[9rem] gap-x-10 gap-y-10">
         {data.testimonials.map((item, index) => (
           <TestimonialItems key={index} item={item} index={index} />

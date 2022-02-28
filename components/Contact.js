@@ -6,7 +6,7 @@ import TwitterIcon from "./TwitterIcon";
 import Button from "./Button";
 function Contact({ data }) {
   return (
-    <section className="text-white lg:px-[9rem] py-16 px-10">
+    <section id="contact" className="text-white lg:px-[9rem] py-16 px-10">
       <div className="grid grid-cols-1 lg:grid-cols-3">
         <div className="lg:px-10">
           <h1 className="text-3xl font-medium">{data.contact_heading}</h1>

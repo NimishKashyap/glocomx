@@ -11,7 +11,7 @@ function TeamItem({ item, index }) {
 }
 function Team({ data }) {
   return (
-    <section className="text-white lg:px-[9rem] px-10 pb-[4rem]">
+    <section id="team" className="text-white lg:px-[9rem] px-10 pb-[4rem]">
       <h1 className="text-3xl font-medium pb-16">{data.team_heading}</h1>
       <div className="grid lg:grid-cols-3 gap-y-16">
         {data.team.map((item, index) => (

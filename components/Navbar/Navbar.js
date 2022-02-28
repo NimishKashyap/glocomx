@@ -5,31 +5,31 @@ import HamburgerIcon from "../HamburgerIcon";
 const listItems = [
   {
     name: "Shop",
-    link: "#",
+    link: "#shop",
   },
   {
     name: "Tokens",
-    link: "#",
+    link: "#token",
   },
   {
     name: "Portfolio",
-    link: "#",
+    link: "#portfolio",
   },
   {
     name: "Roadmap",
-    link: "#",
+    link: "#roadmap",
   },
   {
     name: "FAQ",
-    link: "#",
+    link: "#faq",
   },
   {
     name: "Team",
-    link: "#",
+    link: "#team",
   },
   {
     name: "Contact",
-    link: "#",
+    link: "#contact",
   },
 ];
 
@@ -50,6 +50,7 @@ function BigNavbar() {
               key={i}
               onClick={() => setSelected(i)}
               animate
+              onClick={() => window.location.replace(item.link)}
               className={`hover:hover-state ${
                 i === selected && "text-primary"
               }`}
@@ -79,9 +80,12 @@ function BigNavbar() {
             <motion.ul className="flex flex-col justify-center items-center h-full gap-y-10 font-medium text-white z-10">
               {listItems.map((item, i) => (
                 <motion.li
-                key={i}
+                  key={i}
                   className="cursor-pointer"
-                  onClick={() => isOpen(false)}
+                  onClick={() => {
+                    window.location.replace(item.link);
+                    isOpen(false);
+                  }}
                 >
                   {item.name}
                 </motion.li>

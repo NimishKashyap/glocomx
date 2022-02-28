@@ -27,7 +27,7 @@ function BenefitCard({ item, index }) {
 
 function Section5({ data }) {
   return (
-    <section className="bg-blue-700 lg:px-16 text-white">
+    <section id="benefits" className="bg-blue-700 lg:px-16 text-white">
       <h1 className="text-white font-medium lg:pt-[5rem] text-xl lg:text-3xl pl-10 lg:pl-[6rem]">
         {data.section5_heading}
       </h1>

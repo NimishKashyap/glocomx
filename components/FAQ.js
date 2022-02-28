@@ -35,7 +35,7 @@ function FAQItems({ item, index }) {
 }
 function FAQ({ data }) {
   return (
-    <section className="text-white px-10 lg:px-[9rem] py-5 lg:py-[5rem]">
+    <section id="faq" className="text-white px-10 lg:px-[9rem] py-5 lg:py-[5rem]">
       <h1 className="text-xl lg:text-3xl font-medium">{data.faq_heading}</h1>
       <div className="grid lg:grid-cols-2 gap-y-16 gap-x-10 py-10">
         <div>

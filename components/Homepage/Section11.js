@@ -14,7 +14,7 @@ function Cards({ item, index }) {
 }
 function Section11({ data }) {
   return (
-    <section className="text-white lg:px-[9rem] py-16">
+    <section  className="text-white lg:px-[9rem] py-16">
       <h1 className="font-medium text-3xl px-10">{data.section11_heading}</h1>
       <div className="grid lg:grid-cols-2 ">
         {data.section11_content.map((item, index) => (
