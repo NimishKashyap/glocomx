@@ -15,7 +15,7 @@ function TestimonialItems({ item, index }) {
 }
 function SmallTestimonial({ item }) {
   return (
-    <div className="flex flex-col overflow-x-scroll items-center text-center bg-blue-400 py-10 rounded-2xl">
+    <div className="flex flex-col items-center text-center bg-blue-400 py-10 rounded-2xl">
       <div className="flex items-center my-5 mx-5">
         <img src={item.img.url} className="h-24 mr-5" alt="Testimonial" />
         <div>
@@ -57,7 +57,7 @@ function Testimonial({ data }) {
       </div>
       <div
         id="scroll-container"
-        className="grid lg:hidden auto-cols-[100%] grid-flow-col overflow-scroll gap-x-5 scroll-smooth"
+        className="grid lg:hidden auto-cols-[100%] grid-flow-col overflow-x-scroll gap-x-5 scroll-smooth no-scrollbar"
       >
         {data.testimonials.map((item, index) => (
           <SmallTestimonial key={index} item={item} index={index} />

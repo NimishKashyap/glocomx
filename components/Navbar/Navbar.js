@@ -1,12 +1,9 @@
 import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion";
 import { useState } from "react";
+import CancelIcon from "../CancelIcon";
 import HamburgerIcon from "../HamburgerIcon";
 
 const listItems = [
-  {
-    name: "Shop",
-    link: "#shop",
-  },
   {
     name: "Tokens",
     link: "#token",
@@ -79,7 +76,7 @@ function BigNavbar() {
             exit={{ opacity: 0 }}
             className="fixed top-0 bottom-0 right-0 left-0 bg-[rgba(0,0,0,0.5)] backdrop-blur-xl z-10"
           >
-            <motion.ul className="flex flex-col justify-center items-center h-full gap-y-10 font-medium text-white z-10">
+            <motion.ul className="flex flex-col justify-center items-center h-full gap-y-10 font-medium text-white z-10 relative">
               {listItems.map((item, i) => (
                 <motion.li
                   key={i}
@@ -92,6 +89,13 @@ function BigNavbar() {
                   {item.name}
                 </motion.li>
               ))}
+              <motion.div
+                onClick={() => isOpen(false)}
+                animate
+                className="w-8 opacity-70 absolute top-[30px] right-[30px]"
+              > 
+                <CancelIcon />
+              </motion.div>
             </motion.ul>
           </motion.div>
         )}

@@ -5,7 +5,7 @@ function ProgressBar({ percentage, width }) {
     >
       <div
         style={{ width: percentage }}
-        className={`flex justify-center items-center bg-primary h-full rounded-3xl text-sm font-semibold text-center`}
+        className={`flex justify-center items-center bg-primary h-full rounded-3xl text-sm font-semibold text-center text-white`}
       >
         {percentage}
       </div>
