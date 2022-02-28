@@ -42,7 +42,7 @@ function BigNavbar() {
   const [open, isOpen] = useState(false);
   return (
     <nav className="px-10 lg:px-36 flex justify-between absolute w-full items-center">
-      <img className="h-28 py-5" src="/assets/images/navbar_logo.png" />
+      <img className="h-24 pt-5" src="/assets/images/glocomx-logo.png" />
       <AnimateSharedLayout transition={{ duration: 0.2 }}>
         <ul className="text-white hidden lg:flex w-3/5 justify-between items-center">
           {listItems.map((item, i) => (

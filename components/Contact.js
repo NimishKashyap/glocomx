@@ -41,19 +41,19 @@ function Contact({ data }) {
           </div>
         </div>
         <div className="border-2 border-[rgba(255,255,255,0.7)] my-5 lg:col-span-2 lg:grid lg:grid-cols-2 py-10 rounded-2xl gap-y-5 px-5">
-          <div className=" lg:ml-12 my-2">
+          <div className="mb-5 lg:mb-0 lg:ml-[4.5rem] my-2">
             <input
               placeholder="First Name"
               className="bg-[rgba(255,255,255,0.15)] w-full px-5 py-2 rounded-3xl "
             />
           </div>
-          <div className="justify-self-end lg:mr-16 mt-2">
+          <div className="mb-5 lg:mb-0 justify-self-end lg:mr-16 mt-2">
             <input
               placeholder="Last Name"
               className="bg-[rgba(255,255,255,0.15)] w-full px-5 py-2 rounded-3xl "
             />
           </div>
-          <div className="col-span-1 lg:col-span-2 lg:justify-self-center w-full lg:px-[4.5rem] mt-2">
+          <div className="mb-5 lg:mb-0 col-span-1 lg:col-span-2 lg:justify-self-center w-full lg:px-[4.5rem] mt-2">
             <input
               placeholder="email"
               className="w-full bg-[rgba(255,255,255,0.15)] px-5 py-2 rounded-3xl"
@@ -67,7 +67,7 @@ function Contact({ data }) {
           </div>
           <Button
             className={
-              "mx-5 w-2/5 col-span-2 lg:w-2/5 bg-primary text-white py-2 mt-10 rounded-3xl justify-self-start lg:mx-[4.5rem] lg:h-16"
+              "w-2/5 col-span-2 lg:w-1/5 bg-primary text-white py-2 mt-10 rounded-3xl justify-self-start lg:mx-[4.5rem] lg:h-16"
             }
           >
             Send

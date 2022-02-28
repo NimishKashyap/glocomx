@@ -4,11 +4,11 @@ function NewsItems({ item, index }) {
   return (
     <motion.div
       whileHover={{ scale: 1.01 }}
-      className="bg-white flex flex-col items-center rounded-2xl mt-5 lg:mt-0 lg:w-[90%]"
+      className="bg-white flex flex-col overflow-hidden items-center rounded-2xl mt-5 lg:mt-0 lg:w-[90%]"
     >
       <img
-        className="w-full object-contain"
-        src={`/assets/images/${index}.png`}
+        className="h-[200px] w-full object-cover"
+        src={item.image.url}
       />
       <div className="py-10 px-8">
         <h1 className="text-3xl">{item.heading}</h1>
