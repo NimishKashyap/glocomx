@@ -48,9 +48,11 @@ function BigNavbar() {
           {listItems.map((item, i) => (
             <motion.li
               key={i}
-              onClick={() => setSelected(i)}
               animate
-              onClick={() => window.location.replace(item.link)}
+              onClick={() => {
+                setSelected(i);
+                window.location.replace(item.link);
+              }}
               className={`hover:hover-state ${
                 i === selected && "text-primary"
               }`}
